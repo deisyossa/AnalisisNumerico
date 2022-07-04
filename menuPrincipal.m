@@ -5,7 +5,7 @@ fprintf ("***Taller Menu principal***\n");
 
 bandera = true;
 while bandera
-  option = menu("Menu principal", "1. Metodos cerrados\n","2. Metodos abiertos\n", "3. Solución de sistemas de ecuaciones lineales\n", "4. Ajuste de curva\n", "5. Metodos de Runge-Kutta\n", "6. Salir\n")
+  option = menu("Menu principal", "1. Metodos cerrados\n","2. Metodos abiertos\n", "3. Solución de sistemas de ecuaciones lineales\n", "4. Ajuste de curva\n", "5. Metodos de Runge-Kutta\n", "6. Salir\n");
   if ((isnumeric(option)) && (option<=6 && option>=0))
     option = int8(option);
     if(option == 1)
@@ -41,12 +41,12 @@ endfunction
 function menuMetodosCerrados
   bandera = true;
   while bandera
-    option = menu("Menu Metodos Cerrados", "1. Bisección\n","2. Falsa posición\n", "3. Menu Principal\n", "4. Salir\n")
+    option = menu("Menu Metodos Cerrados", "1. Bisección\n","2. Falsa posición\n", "3. Menu Principal\n", "4. Salir\n");
     if ((isnumeric(option)) && (option<=4 && option>=0))
        if(option == 1)
-        printf ("Metodos Bisección\n");
+        biseccion();
        elseif(option == 2)
-         printf ("Metodos Falsa posición\n")
+        falsaPosicion();
        elseif(option == 3)
          menuPrincipal();
          bandera = false;
@@ -63,7 +63,7 @@ endfunction
 function menuMetodosAbiertos
   bandera = true;
   while bandera
-    option = menu("Menu Metodos Cerrados", "1. Newton Raphson\n","2. Punto fijo\n", "3. Secante\n", "4. Menu Principal\n", "5. Salir\n")
+    option = menu("Menu Metodos Cerrados", "1. Newton Raphson\n","2. Punto fijo\n", "3. Secante\n", "4. Menu Principal\n", "5. Salir\n");
     if ((isnumeric(option)) && (option<=5 && option>=0))
        if(option == 1)
         printf ("Metodos Newton Raphson\n");
@@ -87,7 +87,7 @@ function menuMetodosAbiertos
  function eLineales
    bandera = true;
   while bandera
-    option = menu("Solución de sistemas de ecuaciones lineales", "1. Cramer\n","2. Sarrus\n", "3. Laplace\n", "4. Gauss-Seidel\n", "5. Diagonal Dominante\n", "6. Menu Principal\n", "7. Salir\n")
+    option = menu("Solución de sistemas de ecuaciones lineales", "1. Cramer\n","2. Sarrus\n", "3. Laplace\n", "4. Gauss-Seidel\n", "5. Diagonal Dominante\n", "6. Menu Principal\n", "7. Salir\n");
     if ((isnumeric(option)) && (option<=7 && option>=0))
        if(option == 1)
         printf ("Metodos Cramer\n");
@@ -116,7 +116,7 @@ function menuMetodosAbiertos
  function ajusteCurva
     bandera = true;
   while bandera
-    option = menu("Ajuste de curva", "1. Newton\n","2. Lagrange\n", "3. Polinomial por minimo cuadrado\n", "4. Menu Principal\n", "5. Salir\n")
+    option = menu("Ajuste de curva", "1. Newton\n","2. Lagrange\n", "3. Polinomial por minimo cuadrado\n", "4. Menu Principal\n", "5. Salir\n");
     if ((isnumeric(option)) && (option<=5 && option>=0))
        if(option == 1)
         printf ("Polinomio de interpolación de Newton\n");
@@ -141,7 +141,7 @@ function menuMetodosAbiertos
  function kutta
     bandera = true;
   while bandera
-    option = menu("Metodos de Runge-Kutta", "1. Euler\n","2. Euler modificado\n", "3. Menu Principal\n", "4. Salir\n")
+    option = menu("Metodos de Runge-Kutta", "1. Euler\n","2. Euler modificado\n", "3. Menu Principal\n", "4. Salir\n");
     if ((isnumeric(option)) && (option<=4 && option>=0))
        if(option == 1)
         printf ("Metodo de Euler\n");
