@@ -66,7 +66,7 @@ function menuMetodosAbiertos
     option = menu("Menu Metodos Cerrados", "1. Newton Raphson\n","2. Punto fijo\n", "3. Secante\n", "4. Menu Principal\n", "5. Salir\n");
     if ((isnumeric(option)) && (option<=5 && option>=0))
        if(option == 1)
-        printf ("Metodos Newton Raphson\n");
+        newtonRaphson();
        elseif(option == 2)
          printf ("Metodos Punto fijo\n");
        elseif(option == 3)
