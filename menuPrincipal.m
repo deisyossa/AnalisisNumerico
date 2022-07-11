@@ -68,7 +68,7 @@ function menuMetodosAbiertos
        if(option == 1)
         newtonRaphson();
        elseif(option == 2)
-         printf ("Metodos Punto fijo\n");
+         puntoFijo();
        elseif(option == 3)
          printf ("Metodos secante\n")
        elseif(option == 4)

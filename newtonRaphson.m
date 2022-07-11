@@ -6,9 +6,9 @@ function newtonRaphson()
   printf ("Metodo Newton Rapshon\n");
   funcion1 = input("\nPor favor ingrese la función principal:","s");
   funcion1 = inline(funcion1);
-  funcion2 = input("\nPor favor ingresar la derivada de la funcion:","s");
+  funcion2 = input("\nPor favor ingrese la derivada de la funcion:","s");
   funcion2 = inline(funcion2);
-  x = input("\nPor favor el valor inicial:");
+  x = input("\nPor favor ingrese el valor inicial:");
   # opciones a mostrar
   mostrar = menuOpcion();
   if(isnumeric(x))
