@@ -70,7 +70,7 @@ function menuMetodosAbiertos
        elseif(option == 2)
          puntoFijo();
        elseif(option == 3)
-         printf ("Metodos secante\n")
+         secante();
        elseif(option == 4)
          menuPrincipal();
          bandera = false;
