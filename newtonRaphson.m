@@ -40,11 +40,12 @@ function calcular(funcion, der_funcion, xi, mostrar)
   while(error > (1 * 10^(-3)))
     f_der = feval(der_funcion, xi);
     f_xi = feval(funcion, xi);
-    siguiente = xi - (f_xi / f_der); #cálculo de X_n+1
 
     if(i ~= 0)
-      error = abs((siguiente - xi) / siguiente * 100); #Cálculo del error
+      error = abs((siguiente - x_a) / siguiente * 100); #Cálculo del error
     endif
+    siguiente = xi - (f_xi / f_der); #cálculo de X_n+1
+    x_a = xi;
     #Ingresa nueva fila a matriz respuesta
     newLine = [i, xi ,f_xi, f_der, error];
     before = resultado;
